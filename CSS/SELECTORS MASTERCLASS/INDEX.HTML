@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS SELECTORS</title>
+    <style>
+      /*this is a class selector with */
+      .bitch {
+        background-color: blue;
+        color: white;
+      }
+      /* this is a id selector with */
+      #Green {
+        background-color: rebeccapurple;
+        color: aliceblue;
+      }
+      /* this a child selector that select direct  child inside an element */
+      div > p {
+        background-color: aqua;
+        color: white;
+      }
+      /* descendant selector */
+      div p {
+        background-color: black;
+        color: white;
+      }
+      /* universal selector */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* pseudo selector */
+      a:visited{
+        color: yellow;
+      }
+      a:link{
+        color: blue;
+      }
+      a:active{
+        background-color: black;
+      }
+      a:hover{
+        background-color: aqua ;
+      }
+      p:first-child{
+        background-color: purple ;
+      }
+      .one{
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bitch">THIS VIDEO IS FOR SELECTORS OF CSS</div>
+    <div id="Green">
+      LETS SEE WHAT HAPPENS WITH ID SELECTOR
+      <P>hello</P>
+      <p>this is a child selector</p>
+    </div>
+    <div>
+        <article>
+          <p>this a paragraph inside article inside div</p>
+        </article>
+      </div>
+      <a href="https://www.google.com">Open Google</a>
+      <a href="https://www.youtube.com">Open Youtube</a>
+      <main class="one">
+        <p>first child as pseudo selector</p>
+        <p>second child as pseudo selector</p>
+      </main>
+  </body>
+</html>
