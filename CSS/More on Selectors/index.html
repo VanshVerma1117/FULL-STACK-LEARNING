@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+        /* .box:first-child{
+            background-color: blueviolet;
+        }
+        .box::first-line{
+            color: blue;
+        }
+         */
+         /* .boxes{
+            *{
+              color: blue;  
+              border: 2px solid black;
+            }
+         }
+         /* this is callled grouping of selectors*/ 
+         /* p , a , .box , [data-color="primary"]{
+            padding-top: 45px;
+         } */ 
+
+         .boxes::before{
+            content: "this is a before text";
+            background-color: blue;
+         }
+         .boxes::after{
+            content: "this is a after text";
+            color: blue;
+         }
+         ::selection{
+            background-color: black;
+            color: aqua; /* color becomes aqua when user selects the text with mouse for copying or any other operation */
+         }
+    </style>
+</head>
+<body>
+    <div data-color="primary" class="boxes">
+        <div class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae repudiandae asperiores expedita, ab vel debitis corrupti ullam? Accusamus ipsum placeat cupiditate quasi architecto cumque, rem iste fuga ipsam eligendi, explicabo iure? Minus rem eius neque sit voluptatem quae, inventore non vitae qui, minima expedita tempore voluptate quod, eveniet soluta tenetur nobis! Aliquid, impedit voluptatem deserunt dignissimos esse velit! Doloribus laudantium vitae doloremque tempora molestiae autem. Eaque, veniam! Alias assumenda nulla ipsum quia iusto harum sapiente. Maiores dolorem, blanditiis aut vitae doloremque perspiciatis, nihil voluptatibus repellendus aspernatur quasi neque nulla distinctio iure quae eligendi reiciendis labore illo. Qui, non voluptatibus!</div>
+        <div class="box">hey i am a bos</div>
+        <div class="box">hey i am a box</div>
+    </div>
+</html>
