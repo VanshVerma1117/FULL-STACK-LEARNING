@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+
+        :root{
+            --color:blue;
+            --seccolor: rgba(151, 2, 2, 0.778);
+            --defpad:(23px);
+            --defop:(0.5)
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+ 
+        .nav{
+            background-color: var(--color);
+        }
+
+        ul{
+            display: flex;
+        }
+        ul li{
+            opacity: var(--defop);
+            list-style: none;
+            padding: var(--defpad);
+            border: 12px solid var(--seccolor);
+            
+        }
+
+        ul li:first-child{
+            --color:rgb(227, 78, 15); /*override value , this will work over variable in :root*/
+            background-color: var(--color , magenta  );
+        }
+        .container{
+            background-color: var(--seccolor);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui labore nulla unde, ab distinctio ea fuga earum debitis assumenda repudiandae, porro magni eaque ducimus nostrum placeat error dignissimos? Nihil eius, fugiat animi voluptatum necessitatibus, quasi ullam explicabo illum ipsa nulla harum dolorem minima, possimus odit.
+    </div>
+</body>
+</html>
