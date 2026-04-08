@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS SIZING UNITS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        background-color: aqua;
+        border: 2px solid black;
+        /* width: 90px; */
+        width: 80vw;
+        margin: auto;
+      }
+
+      .container {
+        box-sizing: border-box;
+        border: 2px solid black;
+        background-color: aqua;
+        width: 80vw;
+        min-height: 80vh;
+        margin: 23px auto;
+        font-size: 18px;
+      }
+
+      .container > p {
+        font-size: 2em; /* 2em means twice of what it inherits from its parent i.e. container = 36px */
+        border: 2px solid red;
+        width: 50%;
+      }
+
+      .mycont {
+        background-color: lightskyblue;
+        box-sizing: border-box;
+        border: 2px solid black;
+        margin: 23px auto;
+        color: blueviolet;
+        font-size: 22px;
+        width: 80vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">this is a box</div>
+    <div class="container">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non ipsum
+        molestias rem nisi tempora amet consequatur, magni, atque illum error
+        voluptas voluptate voluptatum consequuntur dolor repellat quasi quia
+        minima totam sint expedita dolorum eos?
+      </p>
+    </div>
+    <div class="mycont">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quidem
+      voluptatibus repellat placeat atque. Repudiandae facilis blanditiis quis
+      adipisci veniam. Repudiandae iure, placeat, fugiat repellendus
+      consectetur, autem maiores cum vero nam ullam cumque aliquam.
+    </div>
+  </body>
+</html>
