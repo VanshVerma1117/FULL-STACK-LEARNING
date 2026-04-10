@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPECIFICITY & CASCADE</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      /* specificity becomes element + class = 1+10 =11 so blue will be assigned */
+      /* h1.cyellow {
+        color: blue;
+      } */
+      .cyellow {
+        color: blue;
+      }
+      .cred {
+        color: blueviolet;
+      }
+      .cpurple {
+        color: cadetblue;
+      }
+      /* last class color and properties will be assigned to the tag unless !important command is given above to other name */
+      [data-x="a"] {
+        background-color: black;
+      }
+      /* data-x=a is an attribute selector above */
+      /* To calculate specificity, assign a value to each part of the selector:
+
+        Universal Selector: 0
+        Element selectors and pseudo-elements: 1
+        Class selectors, attribute selectors, and pseudo-classes: 10
+        ID selectors: 100
+        Inline styles: 1000 */
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- specificity order , which one is at priority, Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector -->
+      <!-- <h1 style="color: rgb(159, 159, 210)" class="cyellow cred cpurple">CSS Specificity</h1> -->
+      <!-- inline commands are highest priority like this , doesnt matter what is written in css sheet of same tag-->
+      <h1 class="cyellow cred cpurple" data-x="a">CSS Specificity</h1>
+    </div>
+  </body>
+</html>
