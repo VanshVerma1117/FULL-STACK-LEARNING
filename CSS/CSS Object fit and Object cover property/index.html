@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object fit and object cover property</title>
+    <style>
+        .container{
+            height: 588px;
+            width: 566px;
+            border: 2px solid black;
+            background-image: url("https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        img{
+           height: 588px;
+           width: 566px;
+           /* Object fit: cover only covers the height and width given inside img tag/border not the parent container */
+           object-fit: cover; 
+          /* object-fit: fill; /* shows full image within the container measuremeant but distorted */
+           object-position: 20px 40px; /* can also use % like 50 and 50 , to show in middle from top bottom */
+           /* object-position: bottom right; */
+           /* object-fit: contain shows full image inside container but not ful area of container covered */
+           /* object-fit: contain; */
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" alt=""> -->
+    </div>
+</body>
+</html>
