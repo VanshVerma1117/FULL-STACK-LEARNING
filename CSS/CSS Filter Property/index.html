@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filter Property</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        /* img{
+            filter: blur(5px);
+        } */
+        .img1{
+            width: 30vw;
+            filter: brightness(120%) , contrast(0.5);
+            filter: invert(1);
+        }
+
+        .img2{
+            width: 30vw;
+            filter: contrast(0.5);
+        }
+
+        .img3{
+            width: 30vw;
+            filter: grayscale(10%);
+        }
+        /* hover over filter text and check MDN for best */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img1" src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-1170x780.jpg" alt="">
+        <img class="img2" src="https://knowlepedia.org/images/0/0e/Salman_Khan.jpg" alt="">
+        <img class="img3" src="https://images.filmibeat.com/img/2019/05/vivek-oberoi-1529414232-1558351453.jpg" alt="">
+    </div>
+</body>
+</html>
