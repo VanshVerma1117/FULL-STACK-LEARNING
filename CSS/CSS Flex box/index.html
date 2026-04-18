@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex Box</title>
+    <style>
+    .container{
+        height: 80vh;
+        border: 5px solid rgb(228, 4, 4);
+        display: flex;
+        /* justify-content: center; items inside container will come to enter from left to right only, basically horizontally center */
+         align-items: center; /* vertically center */
+       /* flex-direction: column; */ /* shows the items in container in column not row */
+        /* flex-direction: column-reverse; this one shows the numbers in reverse like box 4 , box 3....box 1 */
+       /* flex-wrap: wrap; /* wraps the item and does'nt let them overflow from container */
+        /*align-content: center; /* this is used for multiple lines of items otherwise for 1 line align-items : center */
+        /* there is no justify items in flexbox */
+       /* flex-flow: row wrap; /* use to define flex direction and flex wrap type */ 
+        gap: 30px 10px;
+       /* flex-grow: 1; /* pure flex box ki width me saare items equal jagah lenge puri width ko leke*/ /* this takes 1 share of the available space/width of container */
+        
+    }
+    .item {
+        height: 50px;
+        width: 50px;
+        background-color: blueviolet;
+        border: 2px solid black;
+        /* margin: 2px; */
+    }
+    .order-1{
+        order: 1;
+    }
+    .order-2{
+        order: 2;
+    }
+    .order-3{
+        order: 3;
+    }
+    /* higher the order , later the item will come in queue or say line , sabse last me */
+    .item-1{
+       /* flex-grow: 2; */ /* this take 2 shares of the available space/width */
+       flex-shrink: 2; /* item will shrink twice faster than other item with value 1 */ 
+       align-self: flex-start; /* self alignment of a single item  */
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item item-1">Box 1</div>
+            <div class="item">Box 2</div>
+            <div class="item">Box 3</div>
+            <div class="item">Box 4</div>
+            <div class="item order-2">Box 5</div>
+            <div class="item">Box 6</div>
+            <div class="item">Box 7</div>
+            <div class="item">Box 8</div>
+            <div class="item">Box 9</div>
+            <div class="item order-1">Box 10</div>
+            <div class="item">Box 11</div>
+        </div>
+    </main>
+</body>
+</html>
