@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+    <style>
+        *{
+            margin: 10px;
+            padding: 10px;
+        }
+        .container{
+            height: 50vh;
+            width: 50vw;
+            border: 2px solid purple;
+        }
+        .box{
+            height: 45px;
+            width: 45px;
+            background-color: aqua;
+            border: 2px solid black;
+            /* margin: 20px; */
+          /*  transform: rotate(40deg); /* /* this rotates the box based on degree input */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           transform: rotate(0.125turn); 
+           transform-origin: 35% 0%; /* transform origin is used to make it rotate around particular point */
+          /* 0.25% turn of 1 complete turn means 90% of 360% */
+
+          /* rotate 40 degree around all axis based on input command rotateX,Y,Z */
+          /* transform: rotateZ(9deg); */
+
+          /* scale makes is bigger in size like 1.6 times below on all axis*/
+          /* transform: scaleX(1.6); */
+
+          /* skew of z axis is not possible only works on x and y axis  */
+          /* transform: skew(35deg); */
+
+          /* translate 34px se aage kheech lega  or agar % use karoge to uski width or height ke basis hoga */
+          /* transform: translateX(-100%) skewX(40deg) translateY(45%);  */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            BOX
+        </div>
+    </div>
+</body>
+</html>
