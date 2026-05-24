@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div style="display: flex;" class="box" data-createdby = "vansh" >Hey i am a box</div>
+        <div class="box">Hey i am a box</div> 
+    </div>
+    <script>
+        // let div = document.createElement("div");
+        // div.innerHTML = "hey i have been inserted <b>by vansh</b>"
+        // div.setAttribute("class" , "created")
+        // document.querySelector(".container").append(div)
+
+       let cont = document.querySelector('.container')
+       cont.insertAdjacentHTML("afterend", "<b> Inserting the afterend adjacent html </b>")
+       cont.insertAdjacentHTML("afterbegin", "<b> Inserting the aftebegin adjacent html </b>")
+       cont.insertAdjacentHTML("beforebegin", "<b> Inserting the beforebegin adjacent html </b>")
+       cont.insertAdjacentHTML("beforeend" , "<h1> Heading beforeend </h1> ")
+
+    </script>
+</body>
+</html>
